@@ -1,0 +1,14 @@
+#wrap{
+    position: relative;
+    float: left;
+    width: 100%;
+    border: 1px solid red;
+}
+#panstwa{
+    width: 850px;
+    height: 400px;
+    color:red;
+    font-size: xx-large;
+    text-align: center;
+    background-image: url("kolo.jfif");
+}
