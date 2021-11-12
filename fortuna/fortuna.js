@@ -1,37 +1,56 @@
 
 var game = {
-  zdobyte : 0,
-  zycia : 1,
+  score : 0,
+  lifes : 5,
 }
 
+var auth = "Sebastian Dresler 224800 <br> Pozdrawiam Serdecznie :)";
+
 //losowanie państwa 
-var elem = document.getElementById("panstwa");
+var elem = document.getElementById("word");
 elem.innerHTML =data[getRandomInt(0,248)]['country'];
-addElement("wrap");
+document.getElementById("numberOfLives").innerHTML = game.lifes;
+document.getElementById("score").innerHTML = game.score;
 
 
 //FUNKCJE
-function addElement(mydiv)
+function addElement()
 {
-  newDiv = document.createElement("span");
-  newDiv.innerHTML = "Sebastian Dresler 224800";
+  let div = document.createElement('aut');
+  div.id = "aut"; 
 
-  my_div = document.getElementById(mydiv);
-  document.body.insertBefore(newDiv, my_div);
+  var newClose = document.createElement('span');
+  newClose.id = "close";
+  newClose.innerHTML = "X";
+  newClose.onclick = function(){
+    this.parentNode.parentNode.removeChild(this.parentNode);
+  }
+  div.appendChild(newClose);
 
-  newDiv.classList.add("mystyle");  
+  var newSpan = document.createElement('span');
+  newSpan.id = "about";
+  newSpan.innerHTML = auth;
+  div.appendChild(newSpan);
+
+  document.body.appendChild(div);
+
 }
 
-function Sprawdz_Litery(){
+function check(){
   var liter = document.getElementById("wpisz_litere").value;
+  var flag = 0;
   for(i=0;i<elem.innerHTML.length;i++){
-      if(elem.innerHTML[i] == value){
-        game.zdobyte+=1;
-      }else{
-        game.zycia-=1;
+      if(elem.innerHTML[i] == liter){
+        flag =1;
       }
   }
-  alert(game.zdobyte);
+  if (flag ==1){
+    game.score+=1;
+  }else{
+    game.lifes-=1;
+  }
+  document.getElementById("numberOfLives").innerHTML = game.lifes;
+  document.getElementById("score").innerHTML = game.score;
 }
 
 function getRandomInt(min, max) {

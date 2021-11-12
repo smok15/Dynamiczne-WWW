@@ -1,14 +1,77 @@
-#wrap{
-    position: relative;
-    float: left;
-    width: 100%;
-    border: 1px solid red;
+body{
+    background-image: url("kolo.jpg");
+    background-size: cover;
 }
-#panstwa{
-    width: 850px;
+
+#game{
+    position: absolute;
+    top: 53%;
+    left: 50%;
     height: 400px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    padding: 100px;
+    width: fit-content;
+    background-color:#8916b6;
+    display: grid;
+}
+#word{
+    font-size: 50px;
     color:red;
-    font-size: xx-large;
     text-align: center;
-    background-image: url("kolo.jfif");
+}
+
+#scoreboard {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    margin: 0 auto;
+    font-size: 50px;
+    color: black;
+}
+
+#close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    display:inline-block;
+    padding:5px 5px;
+}
+
+#about{
+    position: absolute;
+    left: 15px;
+    top: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#aut{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    font-size: 50px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(200, 255, 0);
+    color: black;
+    text-align: center;
+}
+
+#graj{
+    font-size: 30px;
+    background-color: rgb(0, 162, 255);
+}
+
+#autor{
+    font-size: 30px;
+    background-color: rgb(255, 166, 0);
+}
+
+#wpisz_litere{
+    height: 35px;
+    font-size: 30px;
 }
