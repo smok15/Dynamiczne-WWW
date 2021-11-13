@@ -7,8 +7,7 @@ var game = {
 var auth = "Sebastian Dresler 224800 <br> Pozdrawiam Serdecznie :)";
 
 //losowanie państwa 
-var elem = document.getElementById("word");
-elem.innerHTML =data[getRandomInt(0,248)]['country'];
+var word =data[getRandomInt(0,248)]['country'];
 document.getElementById("numberOfLives").innerHTML = game.lifes;
 document.getElementById("score").innerHTML = game.score;
 
@@ -36,11 +35,35 @@ function addElement()
 
 }
 
+
+function addSpan() {
+  var mydiv = document.getElementById("word");
+
+  for (var i = 0; i <= word.length - 1; i++) {
+    var newDiv2 = document.createElement("span");
+    var newDiv3 = document.createElement("span");
+    newDiv2.classList.add("letter");
+    newDiv3.classList.add("blank");
+    newDiv3.id = i;
+    newDiv2.innerHTML = word[i];
+    newDiv2.appendChild(newDiv3);
+    mydiv.appendChild(newDiv2);
+  }
+  removeElement(2);
+}
+
+addSpan();
+
+function removeElement(id) {
+  var elem = document.getElementById(id);
+  return elem.parentNode.removeChild(elem);
+}
+
 function check(){
   var liter = document.getElementById("wpisz_litere").value;
   var flag = 0;
-  for(i=0;i<elem.innerHTML.length;i++){
-      if(elem.innerHTML[i] == liter){
+  for(i=0;i<word.length;i++){
+      if(word[i] == liter){
         flag =1;
       }
   }

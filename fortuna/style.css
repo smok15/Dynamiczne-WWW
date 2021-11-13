@@ -3,6 +3,13 @@ body{
     background-size: cover;
 }
 
+#my-word {
+    margin: 0;
+    display: block;
+    padding: 0;
+    display:block;
+  }
+
 #game{
     position: absolute;
     top: 53%;
@@ -45,6 +52,20 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.letter {
+    width: 40px;
+    height: 40px;
+    color: red;
+    font-size: 50px;
+    float: left;
+}
+
+.blank{
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
 }
 
 #aut{
