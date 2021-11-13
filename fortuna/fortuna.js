@@ -66,6 +66,7 @@ function check(){
   for(i=0;i<word.length;i++){
       if(word[i] == liter){
         flag =1;
+        removeElement(i);
       }
   }
   if (flag ==1){
@@ -83,6 +84,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+alert(word);
 /*
 alert(data[0]['country']);
 var elem = document.getElementById("panstwa");
