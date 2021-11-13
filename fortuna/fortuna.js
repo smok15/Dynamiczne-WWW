@@ -7,8 +7,7 @@ var game = {
 var auth = "Sebastian Dresler 224800 <br> Pozdrawiam Serdecznie :)";
 
 //losowanie państwa 
-var elem = document.getElementById("word");
-elem.innerHTML =data[getRandomInt(0,248)]['country'];
+var word =data[getRandomInt(0,248)]['country'];
 document.getElementById("numberOfLives").innerHTML = game.lifes;
 document.getElementById("score").innerHTML = game.score;
 
@@ -36,17 +35,42 @@ function addElement()
 
 }
 
+
+function addSpan() {
+  var mydiv = document.getElementById("word");
+
+  for (var i = 0; i <= word.length - 1; i++) {
+    var newDiv2 = document.createElement("span");
+    newDiv2.classList.add("letter");
+    newDiv2.innerHTML = word[i];
+
+    var blank = document.createElement("span");
+    blank.classList.add("blank");
+    blank.id = i;
+    blank.innerHTML = "X";
+    newDiv2.appendChild(blank);
+    mydiv.appendChild(newDiv2);
+  }
+}
+
+addSpan();
+
+function removeElement(id) {
+  var elem = document.getElementById(id);
+  return elem.parentNode.removeChild(elem);
+}
+
 function check(){
   var liter = document.getElementById("wpisz_litere").value;
   var flag = 0;
-  for(i=0;i<elem.innerHTML.length;i++){
-      if(elem.innerHTML[i] == liter){
+  for(i=0;i<word.length;i++){
+      if(word[i] == liter){
         flag =1;
+        game.score+=1;
+        removeElement(i);
       }
   }
-  if (flag ==1){
-    game.score+=1;
-  }else{
+  if (flag ==0){
     game.lifes-=1;
   }
   document.getElementById("numberOfLives").innerHTML = game.lifes;
@@ -59,6 +83,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+alert(word);
 /*
 alert(data[0]['country']);
 var elem = document.getElementById("panstwa");
