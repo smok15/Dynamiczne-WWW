@@ -41,15 +41,16 @@ function addSpan() {
 
   for (var i = 0; i <= word.length - 1; i++) {
     var newDiv2 = document.createElement("span");
-    var newDiv3 = document.createElement("span");
     newDiv2.classList.add("letter");
-    newDiv3.classList.add("blank");
-    newDiv3.id = i;
     newDiv2.innerHTML = word[i];
-    newDiv2.appendChild(newDiv3);
+
+    var blank = document.createElement("span");
+    blank.classList.add("blank");
+    blank.id = i;
+    blank.innerHTML = "X";
+    newDiv2.appendChild(blank);
     mydiv.appendChild(newDiv2);
   }
-  removeElement(2);
 }
 
 addSpan();
