@@ -66,10 +66,11 @@ body{
 .blank{
     position: absolute;
     transform: translate(-100%);
-    width: 40px;
+    width: 45px;
     height: 70px;
     color: white;
     background-color: white;
+    border-radius: 2px;
 }
 
 #aut{
