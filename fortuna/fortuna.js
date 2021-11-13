@@ -66,12 +66,11 @@ function check(){
   for(i=0;i<word.length;i++){
       if(word[i] == liter){
         flag =1;
+        game.score+=1;
         removeElement(i);
       }
   }
-  if (flag ==1){
-    game.score+=1;
-  }else{
+  if (flag ==0){
     game.lifes-=1;
   }
   document.getElementById("numberOfLives").innerHTML = game.lifes;
