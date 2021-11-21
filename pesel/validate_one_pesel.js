@@ -2,8 +2,8 @@
 this.addEventListener('message', function(e) {
   switch(e.data) {
       case 'start':
-          //validate();
-          this.postMessage('watek uruchomiony!');
+          validate();
+          //this.postMessage('watek uruchomiony!');
           break;
       case 'stop':
           this.postMessage('watek zatrzymany!');
@@ -15,8 +15,6 @@ this.addEventListener('message', function(e) {
 }, false);
 
 function validate(){
-  var year = document.getElementById("wpisz_rok").value;
-  var month = document.getElementById("wpisz_miesiac").value;
-  var day = document.getElementById("wpisz_dzien").value;
-  alert(year + " " + month+ " "+day)
+  var licz =  document.getElementById("wpisz_rok").value;
+  this.postMessage(licz);
 }
