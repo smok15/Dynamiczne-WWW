@@ -8,7 +8,6 @@ function validate(){
 
   alert("siema");
   worker.postMessage('start');
-  //worker.postMessage('stop');
 }
 
 
