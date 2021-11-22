@@ -47,7 +47,7 @@ function addSpan() {
     var blank = document.createElement("span");
     blank.classList.add("blank");
     blank.id = i;
-    blank.innerHTML = "X";
+    blank.innerHTML = "M";
     newDiv2.appendChild(blank);
     mydiv.appendChild(newDiv2);
   }
@@ -58,6 +58,16 @@ addSpan();
 function removeElement(id) {
   var elem = document.getElementById(id);
   return elem.parentNode.removeChild(elem);
+}
+
+function checkWin(){
+  if (word.length === game.score){
+    window.location.reload();
+    game.lifes+=5;
+  }
+  if(game.lifes === 0){
+    alert("Przegrałeś, przeładuj stronę aby zagrać ponownie!")
+  }
 }
 
 function check(){
@@ -73,6 +83,7 @@ function check(){
   if (flag ==0){
     game.lifes-=1;
   }
+  checkWin();
   document.getElementById("numberOfLives").innerHTML = game.lifes;
   document.getElementById("score").innerHTML = game.score;
 }
@@ -83,18 +94,5 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-alert(word);
-/*
-alert(data[0]['country']);
-var elem = document.getElementById("panstwa");
-elem.innerHTML =data[2]['country'];
-
-alert(data.length);
-alert(data[0]['country'][2]);
-
- for (var i = 0; i < data[0]['country'].length; i += 1) {
-    alert(data[0]['country'][i]);  
-  }
-*/
 
 
