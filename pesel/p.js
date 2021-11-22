@@ -6,7 +6,8 @@ function validate(){
     alert('otrzymano odpowiedź: ' + e.data);
   }, false);
 
-  worker.postMessage('start');
+  var x = document.getElementById("wpisz_rok").value;
+  worker.postMessage({info:'start'},[x]);
 }
 
 

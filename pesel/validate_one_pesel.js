@@ -1,9 +1,10 @@
 
 this.addEventListener('message', function(e) {
-  switch(e.data) {
+  var data = e.data;
+  switch(data.cmd) {
       case 'start':
           //validate();
-          this.postMessage('watek uruchomiony!');
+          this.postMessage(data.msg);
           break;
       case 'stop':
           this.postMessage('watek zatrzymany!');
