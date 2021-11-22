@@ -24,5 +24,4 @@ function showAll(){
   var month = document.getElementById("wpisz_miesiac").value;
   var day = document.getElementById("wpisz_dzien").value;
   worker.postMessage([year,month,day]);
-  worker.terminate();
 }
