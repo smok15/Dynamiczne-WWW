@@ -6,8 +6,9 @@ function validate(){
     alert('otrzymano odpowiedź: ' + e.data);
   }, false);
 
-  var x = document.getElementById("wpisz_rok").value;
-  worker.postMessage(x);
+  var year = document.getElementById("wpisz_rok").value;
+  var month = document.getElementById("wpisz_miesiac").value;
+  worker.postMessage(year,month);
 }
 
 
