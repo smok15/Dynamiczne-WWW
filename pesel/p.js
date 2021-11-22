@@ -6,7 +6,6 @@ function validate(){
     alert('otrzymano odpowiedź: ' + e.data);
   }, false);
 
-  alert("siema");
   worker.postMessage('start');
 }
 
