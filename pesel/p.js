@@ -8,7 +8,7 @@ function validate(){
 
   var year = document.getElementById("wpisz_rok").value;
   var month = document.getElementById("wpisz_miesiac").value;
-  worker.postMessage({year,month});
+  worker.postMessage([year,month]);
 }
 
 
