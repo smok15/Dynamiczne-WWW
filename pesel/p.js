@@ -6,8 +6,11 @@ function validate(){
     alert('otrzymano odpowiedź: ' + e.data);
   }, false);
 
-  alert("siema");
-  worker.postMessage('start');
+  var year = document.getElementById("wpisz_rok").value;
+  var month = document.getElementById("wpisz_miesiac").value;
+  var day = document.getElementById("wpisz_dzien").value;
+  var pesel = document.getElementById("wpisz_pesel").value;
+  worker.postMessage([year,month,day,pesel]);
 }
 
 
