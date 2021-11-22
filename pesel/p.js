@@ -14,7 +14,7 @@ function validate(){
   worker.terminate();
 }
 
-
+/*
 function showAll(){
   var worker = new Worker('show_all_pesels.js');
 
@@ -27,4 +27,4 @@ function showAll(){
   var day = document.getElementById("wpisz_dzien").value;
   worker.postMessage([year,month,day]);
   worker.terminate();
-}
+}*/
