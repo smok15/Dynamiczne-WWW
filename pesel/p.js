@@ -7,7 +7,7 @@ function validate(){
   }, false);
 
   var x = document.getElementById("wpisz_rok").value;
-  worker.postMessage({info:'start'},[x]);
+  worker.postMessage('start',x);
 }
 
 
