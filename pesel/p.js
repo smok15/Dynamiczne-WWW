@@ -11,9 +11,7 @@ function validate(){
   var day = document.getElementById("wpisz_dzien").value;
   var pesel = document.getElementById("wpisz_pesel").value;
   worker.postMessage([year,month,day,pesel]);
-  worker.terminate();
 }
-
 
 function showAll(){
   var worker = new Worker('show_all_pesels.js');
