@@ -3,6 +3,8 @@ function validate(){
   var worker = new Worker('validate_one_pesel.js');
 
   worker.addEventListener('message', function(e) {
+    let res = document.getElementById("results");
+    res.innerHTML = e.data.join();
     alert('otrzymano odpowiedź: ' + e.data);
   }, false);
 
