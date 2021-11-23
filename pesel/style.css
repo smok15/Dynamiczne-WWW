@@ -19,18 +19,8 @@ body{
 
 #results{
     background-color: orangered;
-    border-radius: 40px;
+    border-radius: 20px;
     color: black;
     position: absolute;
-    top: 100px;
-}
-
-.validate{
-    background-color: powderblue;
-}
-.bydate{
-    background-color: powderblue;
-}
-.bynumber{
-    background-color: powderblue;
+    top: 80px;
 }
