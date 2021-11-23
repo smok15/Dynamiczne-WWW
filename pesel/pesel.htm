@@ -10,12 +10,13 @@
 
 <body>
 	<div id="pesel">
-		<div id="logic">
+		<div id="input">
 			<input id="wpisz_rok" type="text" placeholder="wpisz rok" />
 			<input id="wpisz_miesiac" type="text" placeholder="wpisz miesiac" />
 			<input id="wpisz_dzien" type="text" placeholder="wpisz dzien" />
 			<input id="wpisz_pesel" type="text" placeholder="5 ostatnich cyfr PESEL" />
-
+		</div>
+		<div id="buttons">
 			<button id="validate" onclick="validate()">Sprawdź poprawność</button>
 			<button id="autor" onclick="byDate()">Sprawdź po dacie</button>
 			<button id="graj" onclick="byNumber()">Sprawdź po peselu</button>
