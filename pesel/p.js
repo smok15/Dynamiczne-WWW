@@ -4,8 +4,7 @@ function validate(){
 
   worker.addEventListener('message', function(e) {
     let res = document.getElementById("results");
-    res.innerHTML = e.data.join();
-    alert('otrzymano odpowiedź: ' + e.data);
+    res.innerHTML = e.data;
   }, false);
 
   var year = document.getElementById("wpisz_rok").value;
@@ -19,7 +18,8 @@ function byDate(){
   var worker1 = new Worker('show_all_pesels.js');
 
   worker1.addEventListener('message', function(e) {
-    alert('otrzymano odpowiedź: ' + e.data);
+    let res = document.getElementById("results");
+    res.innerHTML = e.data.join("\n");
   }, false);
 
   var year = document.getElementById("wpisz_rok").value;
@@ -33,7 +33,8 @@ function byNumber(){
   var worker2 = new Worker('find_valid_pesels.js');
 
   worker2.addEventListener('message', function(e) {
-    alert('otrzymano odpowiedź: ' + e.data);
+    let res = document.getElementById("results");
+    res.innerHTML = e.data.join("\n");
   }, false);
 
   var pesel = document.getElementById("wpisz_pesel").value;
