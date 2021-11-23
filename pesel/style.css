@@ -6,23 +6,29 @@ body{
 #input{
     position: absolute;
     left: 50%;
+    text-align:center;
     transform: translate(-50%, -50%);
-    top: 20px;
+    top: 25px;
 }
 
 #buttons{
     position: absolute;
     left: 50%;
+    text-align:center;
     transform: translate(-50%, -50%);
     top: 60px;
 }
 
 #results{
-    background-color: orangered;
+    background-color: #ed6e3f;
     border-radius: 20px;
     color: black;
+    text-align:center;
+    left: 65%;
+    font-weight:bold;
     position: absolute;
-    top: 80px;
+    transform: translate(-90%, 0%);
+    top: 90px;
 }
 #wpisz_rok{
     font-size: 15px;
