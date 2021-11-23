@@ -14,7 +14,7 @@ body{
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 50px;
+    top: 60px;
 }
 
 #results{
@@ -23,4 +23,34 @@ body{
     color: black;
     position: absolute;
     top: 80px;
+}
+#wpisz_rok{
+    font-size: 15px;
+    background-color:lightblue;
+}
+#wpisz_dzien{
+    font-size: 15px;
+    background-color:lightblue;
+}
+#wpisz_miesiac{
+    font-size: 15px;
+    background-color:lightblue;
+}
+#wpisz_pesel{
+    font-size: 15px;
+    background-color:lightblue;
+}
+#validate{
+    background-color:orange;
+    font-size: 20px;
+    font-weight:bold;
+}
+#autor{
+    background-color:orange;
+    font-size: 20px;
+    font-weight:bold;
+}
+#graj{
+    background-color:orange;
+    font-size: 20px;font-weight:bold;
 }
