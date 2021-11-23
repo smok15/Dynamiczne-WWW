@@ -5,17 +5,18 @@ body{
 
 #input{
     position: absolute;
-    background-color: red;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #buttons{
-    background-color: green;
     position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
     top: 50px;
 }
 
 #results{
-    background-color: blue;
     position: absolute;
     top: 100px;
 }
