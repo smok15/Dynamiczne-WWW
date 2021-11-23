@@ -5,6 +5,6 @@ this.addEventListener('message', function(e) {
   }, false);
 
   function dateGenerator(){
-      var date = new Date(1930,0,1);
-      return date.getFullYear();
+      var date = (new Date(1930,0,1))+1;
+      return date;
   }
