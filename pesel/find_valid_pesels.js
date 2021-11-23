@@ -6,5 +6,6 @@ this.addEventListener('message', function(e) {
 
   function dateGenerator(){
       var date = (new Date(1930,0,1))+1;
+      date.setDate(date.getDate() + 1);
       return date;
   }
