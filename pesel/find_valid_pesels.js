@@ -5,7 +5,7 @@ this.addEventListener('message', function(e) {
   }, false);
 
   function dateGenerator(){
-      var date = (new Date(1930,0,1))+1;
-      date.setDate(date + 1);
+      var date = new Date(1930,0,1);
+      date.setTime(date.getTime() + 86400000);
       return date;
   }
