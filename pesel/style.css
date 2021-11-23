@@ -24,10 +24,10 @@ body{
     border-radius: 20px;
     color: black;
     text-align:center;
-    left: 65%;
+    left: 50%;
     font-weight:bold;
     position: absolute;
-    transform: translate(-90%, 0%);
+    transform: translate(-50%, 0%);
     top: 90px;
 }
 #wpisz_rok{
