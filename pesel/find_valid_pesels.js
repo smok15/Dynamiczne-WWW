@@ -6,5 +6,5 @@ this.addEventListener('message', function(e) {
 
   function dateGenerator(){
       var date = new Date(1930,0,1);
-      return date.getFullYear;
+      return date.getFullYear();
   }
