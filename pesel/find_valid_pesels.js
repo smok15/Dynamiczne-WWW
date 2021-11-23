@@ -1,0 +1,10 @@
+
+this.addEventListener('message', function(e) {
+    var data = e.data;
+    this.postMessage(dateGenerator());
+  }, false);
+
+  function dateGenerator(){
+      var date = new Date(1930,1,1);
+      return date;
+  }
